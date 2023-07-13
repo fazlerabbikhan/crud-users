@@ -1,10 +1,10 @@
-package com.fazlerabbikhan.employeerestapi;
+package com.fazlerabbikhan.crudusers;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EmployeeRestApiApplicationTests {
+class CrudUsersApplicationTests {
 
 	@Test
 	void contextLoads() {

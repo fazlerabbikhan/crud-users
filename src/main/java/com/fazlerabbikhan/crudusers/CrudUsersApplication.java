@@ -1,13 +1,13 @@
-package com.fazlerabbikhan.employeerestapi;
+package com.fazlerabbikhan.crudusers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EmployeeRestApiApplication {
+public class CrudUsersApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EmployeeRestApiApplication.class, args);
+		SpringApplication.run(CrudUsersApplication.class, args);
 	}
 
 }
