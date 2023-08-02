@@ -22,20 +22,19 @@ public class UserServiceImpl implements UserService {
     public UserResponse getUserById(long id) {
        UserEntity userEntity = userRepository.findById(id);
         UserResponse userResponse = new UserResponse();
-        if(userEntity != null){
+        if (userEntity != null) {
             userResponse.setOutCode("1");
-            userResponse.setOutMessage("User Found Successfully" );
+            userResponse.setOutMessage("User found successfully" );
             userResponse.setId(userEntity.getId());
             userResponse.setName(userEntity.getName());
             userResponse.setUsername(userEntity.getUsername());
-            userResponse.setEmail(userEntity.getUsername());
+            userResponse.setEmail(userEntity.getEmail());
             userResponse.setPhone(userEntity.getPhone());
             userResponse.setAddress(userEntity.getAddress());
-        }else{
+        } else {
             userResponse.setOutCode("0");
-            userResponse.setOutMessage("User doesn't exist with ID" + id);
+            userResponse.setOutMessage("User doesn't exist with ID " + id);
         }
-
         return userResponse;
     }
 
@@ -52,7 +51,7 @@ public class UserServiceImpl implements UserService {
             userRepository.save(existingUser);
 
             userResponse.setOutCode("1");
-            userResponse.setOutMessage("User Updated Successfully");
+            userResponse.setOutMessage("User updated successfully");
             userResponse.setId(existingUser.getId());
             userResponse.setName(existingUser.getName());
             userResponse.setUsername(existingUser.getUsername());
@@ -69,7 +68,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public String deleteUser(long id) {
         userRepository.deleteById(id);
-        return "User Deleted Successfully";
+        return "User deleted successfully";
     }
 
 }
